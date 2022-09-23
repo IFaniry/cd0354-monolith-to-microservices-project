@@ -27,6 +27,12 @@ spec:
           image: ifaniry/udagram-frontend:v1.2
           ports:
             - containerPort: 80
+          resources:
+            limits:
+              cpu: 512m
+            requests:
+              cpu: 256m
+
 ---
 apiVersion: v1
 kind: Service
