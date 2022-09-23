@@ -23,8 +23,9 @@ services:
     #   - postgres # for local dev
   backend-feed:
     image: udagram-api-feed
-    # volumes: # for local dev
-    #   - ./udagram-api-feed:/usr/src/app # for local dev
+    volumes:
+      - ~/.aws:/root/.aws
+      # - ./udagram-api-feed:/usr/src/app # for local dev
     environment:
       POSTGRES_USERNAME: $POSTGRES_USERNAME
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
